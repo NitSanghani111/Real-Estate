@@ -38,6 +38,185 @@
         <link rel="stylesheet" href="assets/css/testimonials.css">
         <link rel="stylesheet" href="assets/css/stats-section.css">
         <link rel="stylesheet" href="assets/css/contact-section.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+
+ <style>
+        :root {
+            --primary-orange: #ff8c00;
+            --dark-blue: #1e3a8a;
+            --light-gray: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .section-wrapper {
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .section-wrapper:nth-child(even) {
+            background: var(--light-gray);
+        }
+
+        .image-container {
+            position: relative;
+            display: flex;
+            gap: 20px;
+            height: 100%;
+        }
+
+        .image-card {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .image-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .image-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .main-image {
+            flex: 1;
+            min-height: 400px;
+        }
+
+        .secondary-image {
+            flex: 1;
+            min-height: 400px;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 30px;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            color: #2d3748;
+        }
+
+        .highlight {
+            color: var(--primary-orange);
+            display: block;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #718096;
+            margin-bottom: 35px;
+        }
+
+        .cta-button {
+            background: var(--primary-orange);
+            color: white;
+            padding: 16px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+            box-shadow: 0 8px 20px rgba(255, 140, 0, 0.3);
+        }
+
+        .cta-button:hover {
+            background: #e67e00;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 140, 0, 0.4);
+            color: white;
+        }
+
+        .decorative-element {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border: 3px solid var(--primary-orange);
+            border-radius: 20px;
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        .element-1 {
+            top: 50px;
+            left: -30px;
+        }
+
+        .element-2 {
+            bottom: 50px;
+            right: -30px;
+        }
+
+        @media (max-width: 768px) {
+            .section-wrapper {
+                padding: 50px 0;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .content-wrapper {
+                padding: 0 15px;
+                margin-bottom: 40px;
+            }
+
+            .image-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .main-image, .secondary-image {
+                min-height: 250px;
+            }
+
+            .section-description {
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section-title {
+                font-size: 1.6rem;
+            }
+
+            .main-image, .secondary-image {
+                min-height: 200px;
+            }
+        }
+    </style>
+
     </head>
     <body>
 
@@ -163,8 +342,72 @@
                 </div>
             </div>
         </section>
-        <!-- End Hero Section -->
 
+
+
+        <!-- End Hero Section -->
+    <section class="section-wrapper">
+        <div class="decorative-element element-1"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                    <div class="image-container">
+                        <div class="image-card main-image">
+                            <img src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?w=600&h=800&fit=crop" alt="Roof inspection worker">
+                        </div>
+                        <div class="image-card secondary-image">
+                            <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=800&fit=crop" alt="Roof repair workers">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="content-wrapper">
+                        <h2 class="section-title">
+                            What goes into our full service 
+                            <span class="highlight">Roof Inspection Phoenix, AZ. ?</span>
+                        </h2>
+                        <p class="section-description">
+                            It is recommended to have roofing inspections every one to two years, but this is often overlooked until a problem arises. Zona Roofing, a highly-rated and trusted Phoenix company, offers a complementary and full service roof inspection to ensure our customers feel secure. Our inspection covers checking for leaks, external damage, structural integrity, and areas needing preventative maintenance.
+                        </p>
+                        <a href="#" class="cta-button">Schedule Your Free Roof Inspection</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="decorative-element element-2"></div>
+    </section>
+
+    <!-- Second Section - Content Left, Images Right (Reverse Order) -->
+    <section class="section-wrapper">
+        <div class="decorative-element element-1"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-1 order-2" data-aos="fade-right">
+                    <div class="content-wrapper">
+                        <h2 class="section-title">
+                            Professional Roofing 
+                            <span class="highlight">Solutions for Your Home</span>
+                        </h2>
+                        <p class="section-description">
+                            Our experienced team provides comprehensive roofing services including installation, repair, and maintenance. We use premium materials and cutting-edge techniques to ensure your roof withstands the harsh Arizona climate. With over 20 years of experience, we guarantee quality workmanship and customer satisfaction on every project.
+                        </p>
+                        <a href="#" class="cta-button">Get Your Free Estimate Today</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-2 order-1 mb-4 mb-lg-0" data-aos="fade-left">
+                    <div class="image-container">
+                        <div class="image-card main-image">
+                            <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=600&h=800&fit=crop" alt="Modern roofing">
+                        </div>
+                        <div class="image-card secondary-image">
+                            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&h=800&fit=crop" alt="Beautiful home roof">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="decorative-element element-2"></div>
+    </section>
         <!-- property area -->
     
 
@@ -527,7 +770,15 @@
         <!-- End Footer Placeholder -->
 
         <script src="assets/js/modernizr-2.6.2.min.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
         <script src="assets/js/jquery-1.10.2.min.js"></script> 
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <script src="assets/js/bootstrap-select.min.js"></script>
