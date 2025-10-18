@@ -1,0 +1,269 @@
+/* Custom Header Styles */
+.header-connect {
+    background-color: #2c3e50;
+    padding: 10px 0;
+    color: #fff;
+}
+
+.header-call span {
+    margin-right: 20px;
+    color: #fff;
+}
+
+.header-call span i {
+    color: #FFA500;
+    margin-right: 5px;
+}
+
+.header-social ul li a {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.header-social ul li a:hover {
+    color: #FFA500;
+}
+
+/* Enhanced Navbar Brand */
+.navbar-brand {
+    display: flex !important;
+    align-items: center;
+    height: 80px !important;
+    padding: 10px 15px !important;
+}
+
+.navbar-brand img {
+    max-height: 70px !important;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.05);
+}
+
+.navbar-brand span {
+    font-size: 28px;
+    font-weight: bold;
+    color: #FFA500 !important;
+    margin-left: 15px;
+    vertical-align: middle;
+    line-height: 1;
+}
+
+.navbar-default {
+    background-color: #fff;
+    border-bottom: 2px solid #f0f0f0;
+    min-height: 80px;
+}
+
+.navbar-default .navbar-nav {
+    margin-top: 10px;
+}
+
+/* Improved Navigation Buttons */
+.navbar-btn.nav-button {
+    background-color: #FFA500;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.navbar-btn.nav-button:hover {
+    background-color: #ff8c00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.navbar-btn.nav-button.login {
+    background-color: transparent;
+    color: #FFA500;
+    border: 2px solid #FFA500;
+}
+
+.navbar-btn.nav-button.login:hover {
+    background-color: #FFA500;
+    color: #fff;
+}
+
+/* Enhanced Main Navigation */
+.main-nav > li > a {
+    color: #333 !important;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 25px 15px !important;
+    transition: color 0.3s ease;
+}
+
+.main-nav > li > a:hover,
+.main-nav > li > a.active {
+    color: #FFA500 !important;
+    background-color: transparent !important;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-call, .header-social {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .navbar-brand {
+        height: 60px !important;
+    }
+    
+    .navbar-brand img {
+        max-height: 50px !important;
+    }
+    
+    .navbar-brand span {
+        font-size: 20px;
+        margin-left: 8px;
+    }
+    
+    .button.navbar-right {
+        margin-top: 10px;
+        text-align: center;
+    }
+    
+    .navbar-btn.nav-button {
+        display: block;
+        width: 100%;
+        margin: 5px 0;
+    }
+    
+    .main-nav > li > a {
+        padding: 15px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-brand span {
+        font-size: 16px;
+        display: none;
+    }
+    
+    .navbar-brand img {
+        max-height: 45px !important;
+    }
+    
+    .header-call span {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+/* Tablet Responsive */
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar-brand span {
+        font-size: 22px;
+    }
+    
+    .navbar-brand img {
+        max-height: 60px !important;
+    }
+}
+
+/* Additional Responsive Enhancements */
+
+/* Container max-width for better responsiveness */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1170px;
+    }
+}
+
+/* Image responsiveness */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+    h1 { font-size: 28px; }
+    h2 { font-size: 24px; }
+    h3 { font-size: 20px; }
+    h4 { font-size: 18px; }
+    
+    .slider-content h2 {
+        font-size: 24px !important;
+    }
+    
+    .slider-content p {
+        font-size: 14px !important;
+    }
+}
+
+/* Search form responsive */
+@media (max-width: 768px) {
+    .search-form .form-group {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .search-form .form-control {
+        width: 100% !important;
+    }
+}
+
+/* Property cards responsive */
+@media (max-width: 768px) {
+    .property-box,
+    .single-footer {
+        margin-bottom: 30px;
+    }
+}
+
+/* Footer responsive */
+@media (max-width: 768px) {
+    .footer-copy .pull-left,
+    .footer-copy .pull-right {
+        float: none !important;
+        text-align: center;
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    .bottom-menu ul {
+        padding: 0;
+    }
+    
+    .bottom-menu ul li {
+        display: inline-block;
+        margin: 0 5px;
+    }
+}
+
+/* Button responsiveness */
+@media (max-width: 480px) {
+    .btn,
+    .navbar-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+/* Grid spacing for mobile */
+@media (max-width: 768px) {
+    .col-xs-12 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Improve touch targets for mobile */
+@media (max-width: 768px) {
+    a, button, input, select, textarea {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
