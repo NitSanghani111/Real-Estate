@@ -6,7 +6,8 @@
 /* Hero Section Base - Fixed Scrolling */
 .hero-section {
     position: relative;
-    min-height: 100vh;
+    min-height: auto;
+    padding: 100px 0 60px;
     display: flex;
     align-items: center;
     background-size: cover;

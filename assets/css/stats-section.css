@@ -1,0 +1,343 @@
+/* ========================================
+   INTERACTIVE STATS SECTION
+   Modern, Animated, User Interactive
+   ======================================== */
+
+.count-area {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.count-area::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(255, 165, 0, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(44, 62, 80, 0.05) 0%, transparent 50%);
+    z-index: 0;
+}
+
+.count-area .container {
+    position: relative;
+    z-index: 1;
+}
+
+.count-area .page-title h2 {
+    font-size: 38px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.count-area .page-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #FFA500 0%, #ff8c00 100%);
+    border-radius: 2px;
+}
+
+/* Stat Item Cards - Interactive */
+.count-item {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px 20px;
+    margin: 20px 0;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.count-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #FFA500 0%, #ff8c00 100%);
+    transition: left 0.6s ease;
+}
+
+.count-item:hover::before {
+    left: 0;
+}
+
+.count-item:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 20px 60px rgba(255, 165, 0, 0.25);
+}
+
+/* Icon Circle - Animated */
+.count-item-circle {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #FFA500 0%, #ff8c00 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    box-shadow: 0 8px 30px rgba(255, 165, 0, 0.35);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.count-item-circle::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    border: 2px dashed #FFA500;
+    opacity: 0;
+    animation: rotateBorder 10s linear infinite;
+    transition: opacity 0.3s ease;
+}
+
+.count-item:hover .count-item-circle::before {
+    opacity: 1;
+}
+
+@keyframes rotateBorder {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.count-item:hover .count-item-circle {
+    transform: scale(1.15) rotate(360deg);
+    box-shadow: 0 12px 40px rgba(255, 165, 0, 0.5);
+}
+
+.count-item-circle span {
+    color: #fff;
+    font-size: 48px;
+    transition: all 0.5s ease;
+}
+
+.count-item:hover .count-item-circle span {
+    transform: scale(1.2);
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Chart/Number Section */
+.chart {
+    text-align: center;
+}
+
+.chart .percent {
+    font-size: 48px;
+    font-weight: 800;
+    color: #2c3e50;
+    margin: 15px 0 10px;
+    position: relative;
+    display: inline-block;
+    transition: all 0.4s ease;
+}
+
+.count-item:hover .chart .percent {
+    color: #FFA500;
+    transform: scale(1.1);
+    text-shadow: 0 4px 15px rgba(255, 165, 0, 0.3);
+}
+
+/* Plus Sign Animation */
+.chart .percent::after {
+    content: '+';
+    position: absolute;
+    top: 0;
+    right: -20px;
+    font-size: 28px;
+    color: #FFA500;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+}
+
+.count-item:hover .chart .percent::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.chart h5 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    transition: all 0.3s ease;
+}
+
+.count-item:hover .chart h5 {
+    color: #2c3e50;
+    transform: translateY(-5px);
+}
+
+/* Progress Bar Effect */
+.count-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #FFA500 0%, #ff8c00 100%);
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.count-item:hover::after {
+    width: 100%;
+}
+
+/* Staggered Animation on Load */
+.count-item:nth-child(1) {
+    animation: fadeInUp 0.6s ease-out 0.1s backwards;
+}
+
+.count-item:nth-child(2) {
+    animation: fadeInUp 0.6s ease-out 0.2s backwards;
+}
+
+.count-item:nth-child(3) {
+    animation: fadeInUp 0.6s ease-out 0.3s backwards;
+}
+
+.count-item:nth-child(4) {
+    animation: fadeInUp 0.6s ease-out 0.4s backwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pulse Animation for Numbers */
+@keyframes countPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.count-item:hover .chart .percent {
+    animation: countPulse 1s ease-in-out infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .count-area {
+        padding: 60px 0;
+    }
+    
+    .count-area .page-title h2 {
+        font-size: 32px;
+    }
+    
+    .count-item {
+        padding: 35px 20px;
+    }
+    
+    .count-item-circle {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .count-item-circle span {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 767px) {
+    .count-area {
+        padding: 50px 0;
+    }
+    
+    .count-area .page-title h2 {
+        font-size: 28px;
+    }
+    
+    .count-item {
+        margin: 15px 0;
+        padding: 30px 15px;
+    }
+    
+    .count-item-circle {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .count-item-circle span {
+        font-size: 36px;
+    }
+    
+    .chart .percent {
+        font-size: 40px;
+    }
+    
+    .chart h5 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .count-item {
+        padding: 25px 10px;
+    }
+    
+    .count-item-circle {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .count-item-circle span {
+        font-size: 32px;
+    }
+    
+    .chart .percent {
+        font-size: 36px;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .count-item,
+    .count-item-circle,
+    .chart .percent,
+    .chart h5 {
+        animation: none !important;
+        transition: none !important;
+    }
+    
+    .count-item:hover {
+        transform: translateY(-5px);
+    }
+}
