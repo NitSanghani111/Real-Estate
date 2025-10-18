@@ -34,6 +34,8 @@
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
         <link rel="stylesheet" href="assets/css/custom.css">
+        <link rel="stylesheet" href="assets/css/hero.css">
+        <link rel="stylesheet" href="assets/css/testimonials.css">
     </head>
     <body>
 
@@ -46,200 +48,120 @@
         <div id="header-placeholder"></div>
         <!-- End Header Placeholder -->
 
-        <div class="slider-area">
-            <div class="slider">
-                <div id="bg-slider" class="owl-carousel owl-theme">
-
-                    <div class="item"><img src="assets/img/slide1/slider-image-1.jpg" alt="GTA V"></div>
-                    <div class="item"><img src="assets/img/slide1/slider-image-2.jpg" alt="The Last of us"></div>
-                    <div class="item"><img src="assets/img/slide1/slider-image-1.jpg" alt="GTA V"></div>
-
-                </div>
-            </div>
-            <div class="slider-content">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
-                        <h2>property Searching Just Got So Easy</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi deserunt deleniti, ullam commodi sit ipsam laboriosam velit adipisci quibusdam aliquam teneturo!</p>
-                        <div class="search-form wow pulse" data-wow-delay="0.8s">
-
-                            <form action="" class=" form-inline">
-                                <button class="btn  toggle-btn" type="button"><i class="fa fa-bars"></i></button>
-
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Key word">
+        <!-- Modern Hero Section -->
+        <section class="hero-section loading" style="background-image: url('assets/img/slide1/slider-image-1.jpg');">
+            <div class="hero-container">
+                <div class="hero-content-wrapper">
+                    
+                    <!-- Left Content: Headline & Features -->
+                    <div class="hero-left-content">
+                        <h1 class="hero-heading">
+                            Find Your <span class="highlight">Dream Home</span> Today
+                        </h1>
+                        <p class="hero-subheading">
+                            Discover premium properties tailored to your lifestyle. Our expert team makes buying, selling, or renting your property effortless and stress-free.
+                        </p>
+                        
+                        <ul class="hero-features">
+                            <li>
+                                <span class="feature-icon"><i class="fa fa-check"></i></span>
+                                <span>Over 10,000+ Premium Properties Listed</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon"><i class="fa fa-check"></i></span>
+                                <span>Trusted by 50,000+ Happy Homeowners</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon"><i class="fa fa-check"></i></span>
+                                <span>Expert Agents with 15+ Years Experience</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon"><i class="fa fa-check"></i></span>
+                                <span>Free Property Valuation & Consultation</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="#properties" class="hero-cta-button">
+                            Browse Properties <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Right Content: Contact Form Card -->
+                    <div class="hero-right-content">
+                        <div class="hero-form-card">
+                            <h3>Get Started Today</h3>
+                            <p>Fill out the form below and our team will contact you within 24 hours</p>
+                            
+                            <form id="heroContactForm" method="post" action="#">
+                                <div class="hero-form-group">
+                                    <label for="fullName">Full Name *</label>
+                                    <input 
+                                        type="text" 
+                                        id="fullName" 
+                                        name="fullName" 
+                                        placeholder="John Doe" 
+                                        required
+                                    >
                                 </div>
-                                <div class="form-group">                                   
-                                    <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Select your city">
-
-                                        <option>New york, CA</option>
-                                        <option>Paris</option>
-                                        <option>Casablanca</option>
-                                        <option>Tokyo</option>
-                                        <option>Marraekch</option>
-                                        <option>kyoto , shibua</option>
-                                    </select>
+                                
+                                <div class="hero-form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input 
+                                        type="email" 
+                                        id="email" 
+                                        name="email" 
+                                        placeholder="john@example.com" 
+                                        required
+                                    >
                                 </div>
-                                <div class="form-group">                                     
-                                    <select id="basic" class="selectpicker show-tick form-control">
-                                        <option> -Status- </option>
-                                        <option>Rent </option>
-                                        <option>Boy</option>
-                                        <option>used</option>  
-
-                                    </select>
+                                
+                                <div class="hero-form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input 
+                                        type="tel" 
+                                        id="phone" 
+                                        name="phone" 
+                                        placeholder="(123) 456-7890" 
+                                        required
+                                    >
                                 </div>
-                                <button class="btn search-btn" type="submit"><i class="fa fa-search"></i></button>
-
-                                <div style="display: none;" class="search-toggle">
-
-                                    <div class="search-row">   
-
-                                        <div class="form-group mar-r-20">
-                                            <label for="price-range">Price range ($):</label>
-                                            <input type="text" class="span2" value="" data-slider-min="0" 
-                                                   data-slider-max="600" data-slider-step="5" 
-                                                   data-slider-value="[0,450]" id="price-range" ><br />
-                                            <b class="pull-left color">2000$</b> 
-                                            <b class="pull-right color">100000$</b>
-                                        </div>
-                                        <!-- End of  -->  
-
-                                        <div class="form-group mar-l-20">
-                                            <label for="property-geo">Property geo (m2) :</label>
-                                            <input type="text" class="span2" value="" data-slider-min="0" 
-                                                   data-slider-max="600" data-slider-step="5" 
-                                                   data-slider-value="[50,450]" id="property-geo" ><br />
-                                            <b class="pull-left color">40m</b> 
-                                            <b class="pull-right color">12000m</b>
-                                        </div>
-                                        <!-- End of  --> 
+                                
+                                <div class="hero-form-group">
+                                    <label for="message">Your Message *</label>
+                                    <textarea 
+                                        id="message" 
+                                        name="message" 
+                                        placeholder="I'm interested in finding a property..." 
+                                        required
+                                    ></textarea>
+                                </div>
+                                
+                                <button type="submit" class="hero-form-submit">
+                                    Get Free Consultation <i class="fa fa-paper-plane"></i>
+                                </button>
+                                
+                                <div class="hero-trust-badges">
+                                    <div class="trust-badge">
+                                        <i class="fa fa-shield"></i>
+                                        <span>100% Secure</span>
                                     </div>
-
-                                    <div class="search-row">
-
-                                        <div class="form-group mar-r-20">
-                                            <label for="price-range">Min baths :</label>
-                                            <input type="text" class="span2" value="" data-slider-min="0" 
-                                                   data-slider-max="600" data-slider-step="5" 
-                                                   data-slider-value="[250,450]" id="min-baths" ><br />
-                                            <b class="pull-left color">1</b> 
-                                            <b class="pull-right color">120</b>
-                                        </div>
-                                        <!-- End of  --> 
-
-                                        <div class="form-group mar-l-20">
-                                            <label for="property-geo">Min bed :</label>
-                                            <input type="text" class="span2" value="" data-slider-min="0" 
-                                                   data-slider-max="600" data-slider-step="5" 
-                                                   data-slider-value="[250,450]" id="min-bed" ><br />
-                                            <b class="pull-left color">1</b> 
-                                            <b class="pull-right color">120</b>
-                                        </div>
-                                        <!-- End of  --> 
-
+                                    <div class="trust-badge">
+                                        <i class="fa fa-clock-o"></i>
+                                        <span>24h Response</span>
                                     </div>
-                                    <br>
-                                    <div class="search-row">  
-
-                                        <div class="form-group">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox"> Fire Place(3100)
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <!-- End of  -->  
-
-                                        <div class="form-group">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox"> Dual Sinks(500)
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <!-- End of  --> 
-
-                                        <div class="form-group">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox"> Hurricane Shutters(99)
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <!-- End of  --> 
+                                    <div class="trust-badge">
+                                        <i class="fa fa-star"></i>
+                                        <span>5-Star Rated</span>
                                     </div>
-
-                                    <div class="search-row">  
-
-                                        <div class="form-group">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox"> Swimming Pool(1190)
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <!-- End of  -->  
-
-                                        <div class="form-group">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox"> 2 Stories(4600)
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <!-- End of  --> 
-
-                                        <div class="form-group">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox"> Emergency Exit(200)
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <!-- End of  --> 
-                                    </div>                                    
-
-                                    <div class="search-row">  
-
-                                        <div class="form-group">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox"> Laundry Room(10073)
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <!-- End of  -->  
-
-                                        <div class="form-group">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox"> Jog Path(1503)
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <!-- End of  --> 
-
-                                        <div class="form-group">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox"> 26' Ceilings(1200)
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <!-- End of  --> 
-                                        <br>
-                                        <hr>
-                                    </div>                             
-                                    <button class="btn search-btn prop-btm-sheaerch" type="submit"><i class="fa fa-search"></i></button>  
-                                </div>                    
-
+                                </div>
                             </form>
                         </div>
                     </div>
+                    
                 </div>
             </div>
-        </div>
+        </section>
+        <!-- End Hero Section -->
 
         <!-- property area -->
     
@@ -247,63 +169,231 @@
         <!--Welcome area -->
        
 
-        <!--TESTIMONIALS -->
-        <div class="testimonial-area recent-property" style="background-color: #FCFCFC; padding-bottom: 15px;">
+        <!--TESTIMONIALS - Modern Design -->
+        <section class="modern-testimonials" id="testimonials">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1 col-sm-12 text-center page-title">
-                        <!-- /.feature title -->
-                        <h2>Our Customers Said  </h2> 
-                    </div>
+                <!-- Header -->
+                <div class="testimonials-header">
+                    <h2>What Our Clients Say</h2>
+                    <p>Don't just take our word for it - hear from thousands of satisfied homeowners who found their dream properties with us</p>
                 </div>
 
-                <div class="row">
-                    <div class="row testimonial">
-                        <div class="col-md-12">
-                            <div id="testimonial-slider">
-                                <div class="item">
-                                    <div class="client-text">                                
-                                        <p>Nulla quis dapibus nisl. Suspendisse llam sed arcu ultried arcu ultricies !</p>
-                                        <h4><strong>Ohidul Islam, </strong><i>Web Designer</i></h4>
-                                    </div>
-                                    <div class="client-face wow fadeInRight" data-wow-delay=".9s"> 
-                                        <img src="assets/img/client-face1.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="client-text">                                
-                                        <p>Nulla quis dapibus nisl. Suspendisse llam sed arcu ultried arcu ultricies !</p>
-                                        <h4><strong>Ohidul Islam, </strong><i>Web Designer</i></h4>
-                                    </div>
-                                    <div class="client-face">
-                                        <img src="assets/img/client-face2.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="client-text">                                
-                                        <p>Nulla quis dapibus nisl. Suspendisse llam sed arcu ultried arcu ultricies !</p>
-                                        <h4><strong>Ohidul Islam, </strong><i>Web Designer</i></h4>
-                                    </div>
-                                    <div class="client-face">
-                                        <img src="assets/img/client-face1.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="client-text">                                
-                                        <p>Nulla quis dapibus nisl. Suspendisse llam sed arcu ultried arcu ultricies !</p>
-                                        <h4><strong>Ohidul Islam, </strong><i>Web Designer</i></h4>
-                                    </div>
-                                    <div class="client-face">
-                                        <img src="assets/img/client-face2.png" alt="">
-                                    </div>
-                                </div>
+                <!-- Testimonials Grid -->
+                <div class="testimonials-grid">
+                    
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            <i class="fa fa-quote-right"></i>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Absolutely fantastic service! They helped me find my dream home in just two weeks. The team was professional, responsive, and made the entire process stress-free. Highly recommend!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SJ</div>
+                            <div class="author-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>Homeowner • Los Angeles, CA</p>
+                            </div>
+                            <div class="verified-badge">
+                                <i class="fa fa-check-circle"></i>
+                                Verified
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            <i class="fa fa-quote-right"></i>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Best real estate experience ever! The agents were knowledgeable, patient, and really understood what I was looking for. They went above and beyond to make sure I got the perfect property."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MC</div>
+                            <div class="author-info">
+                                <h4>Michael Chen</h4>
+                                <p>Property Investor • New York, NY</p>
+                            </div>
+                            <div class="verified-badge">
+                                <i class="fa fa-check-circle"></i>
+                                Verified
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            <i class="fa fa-quote-right"></i>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Professional, efficient, and trustworthy. They sold my property for 15% above asking price! Their marketing strategy and negotiation skills are top-notch. 10/10 would recommend."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">EP</div>
+                            <div class="author-info">
+                                <h4>Emily Parker</h4>
+                                <p>Home Seller • Miami, FL</p>
+                            </div>
+                            <div class="verified-badge">
+                                <i class="fa fa-check-circle"></i>
+                                Verified
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            <i class="fa fa-quote-right"></i>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "From start to finish, the experience was seamless. They handled all the paperwork, negotiations, and made buying my first home easy. Couldn't have asked for a better team!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">DW</div>
+                            <div class="author-info">
+                                <h4>David Williams</h4>
+                                <p>First-Time Buyer • Chicago, IL</p>
+                            </div>
+                            <div class="verified-badge">
+                                <i class="fa fa-check-circle"></i>
+                                Verified
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            <i class="fa fa-quote-right"></i>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Outstanding service and results! They understood my needs perfectly and found me an amazing rental property in the perfect neighborhood. Communication was excellent throughout."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">LM</div>
+                            <div class="author-info">
+                                <h4>Lisa Martinez</h4>
+                                <p>Renter • Austin, TX</p>
+                            </div>
+                            <div class="verified-badge">
+                                <i class="fa fa-check-circle"></i>
+                                Verified
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 6 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            <i class="fa fa-quote-right"></i>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Exceptional expertise and dedication! They helped me build an incredible property portfolio. Their market knowledge and investment insights are invaluable. True professionals!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">RT</div>
+                            <div class="author-info">
+                                <h4>Robert Taylor</h4>
+                                <p>Real Estate Investor • Seattle, WA</p>
+                            </div>
+                            <div class="verified-badge">
+                                <i class="fa fa-check-circle"></i>
+                                Verified
                             </div>
                         </div>
                     </div>
 
                 </div>
+
+                <!-- Stats -->
+                <div class="testimonials-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">4.9</span>
+                        <span class="stat-label">Average Rating</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">12,500+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Satisfaction Rate</span>
+                    </div>
+                </div>
+
+                <!-- Review Platforms -->
+                <div class="review-platforms">
+                    <div class="platform-item">
+                        <div class="platform-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="score">4.9</span>
+                        </div>
+                        <div class="platform-name">Google Reviews</div>
+                    </div>
+                    <div class="platform-item">
+                        <div class="platform-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="score">5.0</span>
+                        </div>
+                        <div class="platform-name">Zillow</div>
+                    </div>
+                    <div class="platform-item">
+                        <div class="platform-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="score">4.8</span>
+                        </div>
+                        <div class="platform-name">Trustpilot</div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+        <!-- End Testimonials -->
 
         <!-- Count area -->
         <div class="count-area">
@@ -431,6 +521,9 @@
         <script src="assets/js/price-range.js"></script>
 
         <script src="assets/js/main.js"></script>
+        
+        <!-- Hero Section Script -->
+        <script src="assets/js/hero.js"></script>
         
         <!-- Partial Loader Script -->
         <script src="assets/js/partials-loader.js"></script>
