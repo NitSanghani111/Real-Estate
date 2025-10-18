@@ -1,0 +1,547 @@
+/* ==========================================
+   ABOUT US PAGE - PROFESSIONAL STYLES
+   ========================================== */
+
+/* General About Page Styles */
+.about-page {
+    background-color: #fff;
+}
+
+.about-section {
+    padding: 40px 0;
+}
+
+.margin-top-40 {
+    margin-top: 40px;
+}
+
+.margin-top-80 {
+    margin-top: 80px;
+}
+
+.margin-bottom-80 {
+    margin-bottom: 80px;
+}
+
+/* Section Header */
+.section-header {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.title-divider {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #FDC600, #FFA500);
+    margin: 0 auto 20px;
+}
+
+.title-divider.white {
+    background: linear-gradient(90deg, #fff, rgba(255,255,255,0.7));
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: #7f8c8d;
+    line-height: 1.6;
+}
+
+/* Company Introduction Section */
+#company-intro {
+    padding-top: 20px;
+}
+
+.about-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-main-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.about-image-wrapper:hover .about-main-image {
+    transform: scale(1.05);
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #FDC600, #FFA500);
+    color: #fff;
+    padding: 25px;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(253, 198, 0, 0.4);
+    width: 140px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.experience-number {
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.experience-text {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.about-content {
+    padding-left: 30px;
+}
+
+.about-content h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.about-content .lead {
+    font-size: 18px;
+    font-weight: 600;
+    color: #34495e;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 15px;
+    color: #7f8c8d;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.about-highlights {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid #FDC600;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: #2c3e50;
+}
+
+.highlight-item:last-child {
+    margin-bottom: 0;
+}
+
+.highlight-item i {
+    color: #27ae60;
+    font-size: 20px;
+    margin-right: 12px;
+}
+
+/* Mission & Vision Section */
+#mission-vision {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.mission-box,
+.vision-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.mission-box:hover,
+.vision-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.mission-icon,
+.vision-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #FDC600, #FFA500);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.mission-icon i,
+.vision-icon i {
+    font-size: 40px;
+    color: #fff;
+}
+
+.mission-box h3,
+.vision-box h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.mission-box p,
+.vision-box p {
+    font-size: 15px;
+    color: #7f8c8d;
+    line-height: 1.8;
+}
+
+/* Core Values Section */
+#core-values {
+    padding-bottom: 40px;
+}
+
+.value-card {
+    background: #fff;
+    padding: 35px 25px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.value-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.value-icon i {
+    font-size: 35px;
+    color: #fff;
+}
+
+.value-card h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.value-card p {
+    font-size: 14px;
+    color: #7f8c8d;
+    line-height: 1.6;
+}
+
+/* Achievements Section */
+#achievements {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.achievements-bg {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    padding: 60px 15px;
+    color: #fff;
+}
+
+.achievements-bg .section-title,
+.achievements-bg .section-subtitle {
+    color: #fff;
+}
+
+.stat-box {
+    text-align: center;
+    padding: 30px 20px;
+    transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-10px);
+}
+
+.stat-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: all 0.3s ease;
+}
+
+.stat-box:hover .stat-icon {
+    background: linear-gradient(135deg, #FDC600, #FFA500);
+}
+
+.stat-icon i {
+    font-size: 40px;
+    color: #fff;
+}
+
+.stat-number {
+    font-size: 48px;
+    font-weight: 800;
+    color: #FDC600;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Why Choose Us Section */
+#why-choose-us {
+    padding-bottom: 40px;
+}
+
+.feature-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+    border-left: 4px solid #FDC600;
+    transition: all 0.3s ease;
+    min-height: 200px;
+}
+
+.feature-box:hover {
+    transform: translateX(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-left-width: 8px;
+}
+
+.feature-number {
+    font-size: 48px;
+    font-weight: 800;
+    color: rgba(253, 198, 0, 0.2);
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.feature-box h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.feature-box p {
+    font-size: 14px;
+    color: #7f8c8d;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Call to Action Section */
+#about-cta .cta-box {
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.95), rgba(52, 73, 94, 0.95)),
+                url('../img/slide1/slider-image-1.jpg') center/cover;
+    padding: 60px 40px;
+    border-radius: 8px;
+    color: #fff;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.cta-box h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.cta-box .lead {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.cta-buttons .btn-primary {
+    background: linear-gradient(135deg, #FDC600, #FFA500);
+    border: none;
+}
+
+.cta-buttons .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(253, 198, 0, 0.4);
+}
+
+.cta-buttons .btn-default {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.cta-buttons .btn-default:hover {
+    background: #fff;
+    color: #2c3e50;
+    transform: translateY(-3px);
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .section-title {
+        font-size: 30px;
+    }
+    
+    .about-content {
+        padding-left: 0;
+        margin-top: 30px;
+    }
+    
+    .experience-badge {
+        width: 120px;
+        height: 120px;
+        bottom: 20px;
+        right: 20px;
+        padding: 20px;
+    }
+    
+    .experience-number {
+        font-size: 36px;
+    }
+    
+    .experience-text {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-title {
+        font-size: 26px;
+    }
+    
+    .section-subtitle {
+        font-size: 16px;
+    }
+    
+    .about-content h3 {
+        font-size: 24px;
+    }
+    
+    .experience-badge {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin: 20px auto;
+    }
+    
+    .value-card {
+        height: auto;
+        min-height: 250px;
+    }
+    
+    .stat-number {
+        font-size: 36px;
+    }
+    
+    .cta-box h2 {
+        font-size: 28px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 22px;
+    }
+    
+    .about-content .lead {
+        font-size: 16px;
+    }
+    
+    .feature-box {
+        min-height: auto;
+    }
+    
+    .cta-box {
+        padding: 40px 20px;
+    }
+}
+
+/* Animation on Scroll */
+.wow {
+    visibility: hidden;
+}
+
+/* Page Load Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-section {
+    animation: fadeInUp 0.6s ease-out;
+}
