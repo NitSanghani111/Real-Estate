@@ -39,6 +39,7 @@
         <link rel="stylesheet" href="assets/css/testimonials.css">
         <link rel="stylesheet" href="assets/css/stats-section.css">
         <link rel="stylesheet" href="assets/css/contact-section.css">
+        <link rel="stylesheet" href="assets/css/faq-section.css">
      
   <style>
         /* Custom styles that work with Bootstrap 3.x */
@@ -627,6 +628,168 @@
         </section>
         <!-- End Contact Us Section -->
 
+        <!-- FAQ Section -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <!-- Section Header -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="faq-header text-center">
+                            <h2 class="faq-title">Frequently Asked Questions</h2>
+                            <div class="faq-title-divider"></div>
+                            <p class="faq-subtitle">Find answers to common questions about buying, selling, and renting properties</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Content -->
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="faq-accordion">
+                            
+                            <!-- FAQ Item 1 -->
+                            <div class="faq-item">
+                                <div class="faq-question" onclick="toggleFAQ(this)">
+                                    <div class="faq-question-text">
+                                        <span class="faq-number">01</span>
+                                        <h4>How do I start the home buying process?</h4>
+                                    </div>
+                                    <div class="faq-icon">
+                                        <i class="fa fa-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Starting your home buying journey is easy! First, get pre-approved for a mortgage to understand your budget. Then, contact our expert agents who will help you find properties that match your needs and guide you through viewing, negotiations, and closing. We're with you every step of the way.</p>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 2 -->
+                            <div class="faq-item">
+                                <div class="faq-question" onclick="toggleFAQ(this)">
+                                    <div class="faq-question-text">
+                                        <span class="faq-number">02</span>
+                                        <h4>What documents do I need to sell my property?</h4>
+                                    </div>
+                                    <div class="faq-icon">
+                                        <i class="fa fa-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>To sell your property, you'll need: property title deed, recent tax receipts, identity proof, sale deed of previous owner, building approval plans, occupancy certificate, and NOC from society/housing board. Our team will provide a complete checklist and help you organize all required documents.</p>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 3 -->
+                            <div class="faq-item">
+                                <div class="faq-question" onclick="toggleFAQ(this)">
+                                    <div class="faq-question-text">
+                                        <span class="faq-number">03</span>
+                                        <h4>How long does it take to close a real estate transaction?</h4>
+                                    </div>
+                                    <div class="faq-icon">
+                                        <i class="fa fa-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Typically, a real estate transaction takes 30-45 days to close. This includes property inspection, financing approval, title search, and final paperwork. However, the timeline can vary based on financing type, property condition, and legal requirements. We work to ensure a smooth and timely closing process.</p>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 4 -->
+                            <div class="faq-item">
+                                <div class="faq-question" onclick="toggleFAQ(this)">
+                                    <div class="faq-question-text">
+                                        <span class="faq-number">04</span>
+                                        <h4>Do you charge any fees for property consultation?</h4>
+                                    </div>
+                                    <div class="faq-icon">
+                                        <i class="fa fa-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>No! Your initial consultation is completely free. We offer complimentary property valuation, market analysis, and expert advice. Our commission is only charged upon successful completion of a transaction. We believe in building trust and providing value before earning your business.</p>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 5 -->
+                            <div class="faq-item">
+                                <div class="faq-question" onclick="toggleFAQ(this)">
+                                    <div class="faq-question-text">
+                                        <span class="faq-number">05</span>
+                                        <h4>Can I view properties virtually before visiting?</h4>
+                                    </div>
+                                    <div class="faq-icon">
+                                        <i class="fa fa-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Absolutely! We offer virtual tours, 360-degree videos, and detailed photo galleries for most of our properties. You can explore properties from the comfort of your home and shortlist your favorites before scheduling physical visits. Contact us to arrange a virtual viewing.</p>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 6 -->
+                            <div class="faq-item">
+                                <div class="faq-question" onclick="toggleFAQ(this)">
+                                    <div class="faq-question-text">
+                                        <span class="faq-number">06</span>
+                                        <h4>What is the difference between buying and renting?</h4>
+                                    </div>
+                                    <div class="faq-icon">
+                                        <i class="fa fa-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Buying offers equity building, tax benefits, and long-term stability but requires upfront investment and maintenance responsibility. Renting provides flexibility, lower upfront costs, and no maintenance burden but builds no equity. Our advisors can help you evaluate which option aligns with your financial goals and lifestyle.</p>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 7 -->
+                            <div class="faq-item">
+                                <div class="faq-question" onclick="toggleFAQ(this)">
+                                    <div class="faq-question-text">
+                                        <span class="faq-number">07</span>
+                                        <h4>How do you determine property valuation?</h4>
+                                    </div>
+                                    <div class="faq-icon">
+                                        <i class="fa fa-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>We use a comprehensive approach including: comparative market analysis (recent sales in the area), property condition assessment, location advantages, current market trends, infrastructure development, and unique features. Our experts provide accurate valuations backed by data and market insights.</p>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 8 -->
+                            <div class="faq-item">
+                                <div class="faq-question" onclick="toggleFAQ(this)">
+                                    <div class="faq-question-text">
+                                        <span class="faq-number">08</span>
+                                        <h4>What areas and cities do you cover?</h4>
+                                    </div>
+                                    <div class="faq-icon">
+                                        <i class="fa fa-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>We have a presence in over 120 cities across the country, covering major metropolitan areas, tier-2 cities, and emerging real estate markets. Our network includes residential, commercial, and luxury properties in prime locations. Contact us to check availability in your desired area.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- FAQ CTA -->
+                        <div class="faq-cta text-center">
+                            <h3>Still have questions?</h3>
+                            <p>Our expert team is here to help you with any queries</p>
+                            <a href="#contact" class="btn btn-primary btn-lg">Contact Our Team</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End FAQ Section -->
+
         <!-- Footer Placeholder -->
         <div id="footer-placeholder"></div>
         <!-- End Footer Placeholder -->
@@ -666,6 +829,33 @@
         
         <!-- Partial Loader Script -->
         <script src="assets/js/partials-loader.js"></script>
+        
+        <!-- FAQ Accordion Script -->
+        <script>
+            function toggleFAQ(element) {
+                const faqItem = element.parentElement;
+                const faqAnswer = faqItem.querySelector('.faq-answer');
+                const faqIcon = element.querySelector('.faq-icon i');
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-answer').style.maxHeight = null;
+                    item.querySelector('.faq-icon i').classList.remove('fa-minus');
+                    item.querySelector('.faq-icon i').classList.add('fa-plus');
+                });
+                
+                // If the clicked item wasn't active, open it
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                    faqAnswer.style.maxHeight = faqAnswer.scrollHeight + 'px';
+                    faqIcon.classList.remove('fa-plus');
+                    faqIcon.classList.add('fa-minus');
+                }
+            }
+        </script>
+        
         <script src="assets/js/anti-inspect.js"></script>
 
     </body>
