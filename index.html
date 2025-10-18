@@ -41,7 +41,62 @@
         <link rel="stylesheet" href="assets/css/stats-section.css">
         <link rel="stylesheet" href="assets/css/contact-section.css">
      
-
+  <style>
+        /* Custom styles that work with Bootstrap 3.x */
+        .btn-custom-orange {
+            background-color: #ff8c00 !important;
+            border-color: #ff8c00 !important;
+            color: white !important;
+        }
+        .btn-custom-orange:hover {
+            background-color: #e67e00 !important;
+            border-color: #e67e00 !important;
+            color: white !important;
+        }
+        .text-custom-orange {
+            color: #ff8c00 !important;
+        }
+        .section-padding {
+            padding: 80px 0;
+        }
+        .img-rounded-custom {
+            border-radius: 20px;
+        }
+        .shadow-custom {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .img-container {
+            margin-bottom: 15px;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        .img-container img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        .content-wrapper {
+            padding: 0 30px;
+        }
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 50px 0;
+            }
+            .img-container img {
+                height: 250px;
+            }
+            .content-wrapper {
+                padding: 0 15px;
+                margin-bottom: 30px;
+            }
+            .mobile-order-1 {
+                order: 1;
+            }
+            .mobile-order-2 {
+                order: 2;
+            }
+        }
+    </style>
  
 
     </head>
@@ -171,39 +226,37 @@
         </section>
 
 
-  <section class="py-5">
-        <div class="container py-5">
-            <div class="row align-items-center g-4">
-                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
-                    <div class="row g-3">
-                        <div class="col-6">
-                            <div class="rounded-4 overflow-hidden shadow-lg h-100">
+  <section class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6">
+                            <div class="img-container shadow-custom">
                                 <img src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?w=600&h=800&fit=crop" 
                                      alt="Roof inspection worker" 
-                                     class="img-fluid w-100 h-100 object-fit-cover" 
-                                     style="min-height: 400px;">
+                                     class="img-responsive">
                             </div>
                         </div>
-                        <div class="col-6">
-                            <div class="rounded-4 overflow-hidden shadow-lg h-100">
+                        <div class="col-xs-6 col-sm-6">
+                            <div class="img-container shadow-custom">
                                 <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=800&fit=crop" 
                                      alt="Roof repair workers" 
-                                     class="img-fluid w-100 h-100 object-fit-cover" 
-                                     style="min-height: 400px;">
+                                     class="img-responsive">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <div class="px-lg-4">
-                        <h2 class="display-5 fw-bold mb-4 lh-sm">
+                <div class="col-md-6 col-sm-12">
+                    <div class="content-wrapper">
+                        <h2 style="font-size: 42px; font-weight: 700; line-height: 1.2; margin-bottom: 25px; color: #2d3748;">
                             What goes into our full service 
-                            <span class="d-block text-custom-orange">Roof Inspection Phoenix, AZ. ?</span>
+                            <span class="text-custom-orange" style="display: block;">Roof Inspection Phoenix, AZ. ?</span>
                         </h2>
-                        <p class="lead text-secondary mb-4 fs-6 lh-lg">
+                        <p style="font-size: 18px; line-height: 1.8; color: #718096; margin-bottom: 35px;">
                             It is recommended to have roofing inspections every one to two years, but this is often overlooked until a problem arises. Zona Roofing, a highly-rated and trusted Phoenix company, offers a complementary and full service roof inspection to ensure our customers feel secure. Our inspection covers checking for leaks, external damage, structural integrity, and areas needing preventative maintenance.
                         </p>
-                        <a href="#" class="btn btn-custom-orange btn-lg text-white fw-semibold px-5 py-3 shadow-lg">
+                        <a href="#" class="btn btn-lg btn-custom-orange" style="padding: 16px 40px; font-weight: 600;">
                             Schedule Your Free Roof Inspection
                         </a>
                     </div>
@@ -213,41 +266,39 @@
     </section>
 
     <!-- Second Section - Content Left, Images Right (Reverse Order) -->
-    <section class="py-5 bg-light">
-        <div class="container py-5">
-            <div class="row align-items-center g-4">
-                <div class="col-lg-6 order-lg-1 order-2" data-aos="fade-right">
-                    <div class="px-lg-4">
-                        <h2 class="display-5 fw-bold mb-4 lh-sm">
-                            Professional Roofing 
-                            <span class="d-block text-custom-orange">Solutions for Your Home</span>
-                        </h2>
-                        <p class="lead text-secondary mb-4 fs-6 lh-lg">
-                            Our experienced team provides comprehensive roofing services including installation, repair, and maintenance. We use premium materials and cutting-edge techniques to ensure your roof withstands the harsh Arizona climate. With over 20 years of experience, we guarantee quality workmanship and customer satisfaction on every project.
-                        </p>
-                        <a href="#" class="btn btn-custom-orange btn-lg text-white fw-semibold px-5 py-3 shadow-lg">
-                            Get Your Free Estimate Today
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-6 order-lg-2 order-1 mb-4 mb-lg-0" data-aos="fade-left">
-                    <div class="row g-3">
-                        <div class="col-6">
-                            <div class="rounded-4 overflow-hidden shadow-lg h-100">
+    <section class="section-padding" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 col-md-push-6 mobile-order-1">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6">
+                            <div class="img-container shadow-custom">
                                 <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=600&h=800&fit=crop" 
                                      alt="Modern roofing" 
-                                     class="img-fluid w-100 h-100 object-fit-cover" 
-                                     style="min-height: 400px;">
+                                     class="img-responsive">
                             </div>
                         </div>
-                        <div class="col-6">
-                            <div class="rounded-4 overflow-hidden shadow-lg h-100">
+                        <div class="col-xs-6 col-sm-6">
+                            <div class="img-container shadow-custom">
                                 <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&h=800&fit=crop" 
                                      alt="Beautiful home roof" 
-                                     class="img-fluid w-100 h-100 object-fit-cover" 
-                                     style="min-height: 400px;">
+                                     class="img-responsive">
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-md-pull-6 mobile-order-2">
+                    <div class="content-wrapper">
+                        <h2 style="font-size: 42px; font-weight: 700; line-height: 1.2; margin-bottom: 25px; color: #2d3748;">
+                            Professional Roofing 
+                            <span class="text-custom-orange" style="display: block;">Solutions for Your Home</span>
+                        </h2>
+                        <p style="font-size: 18px; line-height: 1.8; color: #718096; margin-bottom: 35px;">
+                            Our experienced team provides comprehensive roofing services including installation, repair, and maintenance. We use premium materials and cutting-edge techniques to ensure your roof withstands the harsh Arizona climate. With over 20 years of experience, we guarantee quality workmanship and customer satisfaction on every project.
+                        </p>
+                        <a href="#" class="btn btn-lg btn-custom-orange" style="padding: 16px 40px; font-weight: 600;">
+                            Get Your Free Estimate Today
+                        </a>
                     </div>
                 </div>
             </div>
@@ -626,10 +677,10 @@
             offset: 100
         });
     </script>
-        <script src="assets/js/jquery-1.10.2.min.js"></script> 
+        <!-- <script src="assets/js/jquery-1.10.2.min.js"></script> 
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <script src="assets/js/bootstrap-select.min.js"></script>
-        <script src="assets/js/bootstrap-hover-dropdown.js"></script>
+        <script src="assets/js/bootstrap-hover-dropdown.js"></script> -->
 
         <script src="assets/js/easypiechart.min.js"></script>
         <script src="assets/js/jquery.easypiechart.min.js"></script>
