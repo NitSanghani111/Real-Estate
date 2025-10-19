@@ -5,10 +5,10 @@
 
 // EmailJS Configuration - FILL THESE IN
 const EMAILJS_CONFIG = {
-    serviceID: '', // Your EmailJS Service ID
-    heroTemplateID: '', // Template ID for Hero Form
-    contactTemplateID: '', // Template ID for Contact Form
-    publicKey: '' // Your EmailJS Public Key
+    serviceID: 'service_65ze147', // Your EmailJS Service ID
+    heroTemplateID: 'template_4sxdae1', // Template ID for Hero Form
+      // Template ID for Contact Form
+    publicKey: '6ytGjjlj8MyqqFGVs' // Your EmailJS Public Key
 };
 
 // Initialize EmailJS when page loads
@@ -96,7 +96,7 @@ function setupContactForm() {
         e.preventDefault();
         
         // Check if EmailJS is configured
-        if (!EMAILJS_CONFIG.publicKey || !EMAILJS_CONFIG.serviceID || !EMAILJS_CONFIG.contactTemplateID) {
+        if (!EMAILJS_CONFIG.publicKey || !EMAILJS_CONFIG.serviceID || !EMAILJS_CONFIG.heroContactForm) {
             showFormMessage('contact', 'error', 'EmailJS is not configured. Please add your credentials.');
             return;
         }
@@ -121,7 +121,7 @@ function setupContactForm() {
         // Send email using EmailJS
         emailjs.send(
             EMAILJS_CONFIG.serviceID,
-            EMAILJS_CONFIG.contactTemplateID,
+            EMAILJS_CONFIG.heroContactForm,
             formData
         )
         .then(function(response) {
@@ -161,7 +161,7 @@ function showFormMessage(formType, type, message) {
             heroForm.appendChild(messageContainer);
         }
     } else {
-        messageContainer = document.getElementById('contactFormMessage');
+        messageContainer = document.getElementById('heroContactForm');
     }
     
     if (!messageContainer) return;
