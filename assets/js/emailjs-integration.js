@@ -1,20 +1,24 @@
 /* ========================================
    EmailJS Integration for VM RankUp Forms
-   Optimized & Production Ready
+   Single Template for All Forms
    ======================================== */
 
-// EmailJS Configuration
+// EmailJS Configuration - Update these with your actual values
 const EMAILJS_CONFIG = {
     serviceID: 'service_65ze147',
-    heroTemplateID: 'template_rygct6n',
-    contactTemplateID: 'template_rygct6n',
+    templateID: 'template_rygct6n',  // Single template for both forms
     publicKey: '6ytGjjlj8MyqqFGVs'
 };
 
 // Initialize EmailJS when page loads
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('EmailJS Initializing...');
+    
     if (EMAILJS_CONFIG.publicKey) {
         emailjs.init(EMAILJS_CONFIG.publicKey);
+        console.log('EmailJS initialized with key:', EMAILJS_CONFIG.publicKey);
+    } else {
+        console.error('EmailJS public key is missing!');
     }
     
     setupHeroForm();
@@ -27,16 +31,23 @@ document.addEventListener('DOMContentLoaded', function() {
 // ============================================
 function setupHeroForm() {
     const heroForm = document.getElementById('heroContactForm');
-    if (!heroForm) return;
+    if (!heroForm) {
+        console.log('Hero form not found on this page');
+        return;
+    }
+    
+    console.log('Hero form found and listener attached');
     
     heroForm.addEventListener('submit', function(e) {
         e.preventDefault();
+        console.log('Hero form submitted');
         
         if (!validateEmailJSConfig()) {
-            showFormMessage('heroFormMessage', 'error', 'Email service is not configured.');
+            alert('Email service is not configured properly. Please contact support.');
             return;
         }
         
+        // Get form data
         const formData = {
             fullName: document.getElementById('fullName').value,
             email: document.getElementById('email').value,
@@ -44,23 +55,30 @@ function setupHeroForm() {
             message: document.getElementById('message').value
         };
         
+        console.log('Hero Form Data:', formData);
+        
         const submitBtn = heroForm.querySelector('button[type="submit"]');
         const originalText = submitBtn.innerHTML;
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Sending...';
         
+        // Send email using EmailJS
+        console.log('Sending email via EmailJS...');
         emailjs.send(
             EMAILJS_CONFIG.serviceID,
-            EMAILJS_CONFIG.heroTemplateID,
+            EMAILJS_CONFIG.templateID,
             formData
         )
         .then(function(response) {
-            console.log('Email sent successfully!', response.status);
+            console.log('SUCCESS! Email sent:', response.status, response.text);
+            alert('Success! Email sent. Redirecting to thank you page...');
+            // Redirect to thank you page
             window.location.href = 'thankyou.html';
         })
         .catch(function(error) {
-            console.error('Email failed:', error);
-            showFormMessage('heroFormMessage', 'error', 'Failed to send message. Please try again.');
+            console.error('FAILED! Email not sent:', error);
+            alert('Error: ' + JSON.stringify(error) + '\n\nPlease check:\n1. Service ID: ' + EMAILJS_CONFIG.serviceID + '\n2. Template ID: ' + EMAILJS_CONFIG.templateID + '\n3. Public Key is correct\n4. Template has fields: fullName, email, contactNo, message');
+            
             submitBtn.disabled = false;
             submitBtn.innerHTML = originalText;
         });
@@ -72,16 +90,23 @@ function setupHeroForm() {
 // ============================================
 function setupContactForm() {
     const contactForm = document.getElementById('contactUsForm');
-    if (!contactForm) return;
+    if (!contactForm) {
+        console.log('Contact form not found on this page');
+        return;
+    }
+    
+    console.log('Contact form found and listener attached');
     
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
+        console.log('Contact form submitted');
         
         if (!validateEmailJSConfig()) {
-            showFormMessage('contactFormMessage', 'error', 'Email service is not configured.');
+            alert('Email service is not configured properly. Please contact support.');
             return;
         }
         
+        // Get form data - Same field names as hero form
         const formData = {
             fullName: document.getElementById('contactName').value,
             email: document.getElementById('contactEmail').value,
@@ -89,23 +114,30 @@ function setupContactForm() {
             message: document.getElementById('contactMessage').value
         };
         
+        console.log('Contact Form Data:', formData);
+        
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalText = submitBtn.innerHTML;
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Sending...';
         
+        // Send email using EmailJS - Same template!
+        console.log('Sending email via EmailJS...');
         emailjs.send(
             EMAILJS_CONFIG.serviceID,
-            EMAILJS_CONFIG.contactTemplateID,
+            EMAILJS_CONFIG.templateID,
             formData
         )
         .then(function(response) {
-            console.log('Email sent successfully!', response.status);
+            console.log('SUCCESS! Email sent:', response.status, response.text);
+            alert('Success! Email sent. Redirecting to thank you page...');
+            // Redirect to thank you page
             window.location.href = 'thankyou.html';
         })
         .catch(function(error) {
-            console.error('Email failed:', error);
-            showFormMessage('contactFormMessage', 'error', 'Failed to send message. Please try again.');
+            console.error('FAILED! Email not sent:', error);
+            alert('Error: ' + JSON.stringify(error) + '\n\nPlease check:\n1. Service ID: ' + EMAILJS_CONFIG.serviceID + '\n2. Template ID: ' + EMAILJS_CONFIG.templateID + '\n3. Public Key is correct\n4. Template has fields: fullName, email, contactNo, message');
+            
             submitBtn.disabled = false;
             submitBtn.innerHTML = originalText;
         });
@@ -116,9 +148,15 @@ function setupContactForm() {
 // VALIDATION & UTILITY FUNCTIONS
 // ============================================
 function validateEmailJSConfig() {
-    return EMAILJS_CONFIG.publicKey && 
-           EMAILJS_CONFIG.serviceID && 
-           (EMAILJS_CONFIG.heroTemplateID || EMAILJS_CONFIG.contactTemplateID);
+    const isValid = EMAILJS_CONFIG.publicKey && 
+                    EMAILJS_CONFIG.serviceID && 
+                    EMAILJS_CONFIG.templateID;
+    
+    if (!isValid) {
+        console.error('EmailJS Config Invalid:', EMAILJS_CONFIG);
+    }
+    
+    return isValid;
 }
 
 function showFormMessage(messageId, type, message) {
@@ -157,3 +195,10 @@ function initPhoneFormatting() {
         }
     });
 }
+
+// Log configuration on load for debugging
+console.log('EmailJS Configuration:', {
+    serviceID: EMAILJS_CONFIG.serviceID,
+    templateID: EMAILJS_CONFIG.templateID,
+    publicKey: EMAILJS_CONFIG.publicKey ? '***' + EMAILJS_CONFIG.publicKey.slice(-4) : 'MISSING'
+});
