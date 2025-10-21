@@ -48,10 +48,14 @@ function setupHeroForm() {
         }
         
         // Get form data
+        const countryCode = document.getElementById('countryCode').value;
+        const phoneNumber = document.getElementById('phone').value;
+        const fullPhone = countryCode + ' ' + phoneNumber;
+        
         const formData = {
             fullName: document.getElementById('fullName').value,
             email: document.getElementById('email').value,
-            contactNo: document.getElementById('phone').value,
+            contactNo: fullPhone,
             message: document.getElementById('message').value
         };
         
@@ -107,10 +111,14 @@ function setupContactForm() {
         }
         
         // Get form data - Same field names as hero form
+        const countryCode = document.getElementById('contactCountryCode').value;
+        const phoneNumber = document.getElementById('contactPhone').value;
+        const fullPhone = countryCode + ' ' + phoneNumber;
+        
         const formData = {
             fullName: document.getElementById('contactName').value,
             email: document.getElementById('contactEmail').value,
-            contactNo: document.getElementById('contactPhone').value,
+            contactNo: fullPhone,
             message: document.getElementById('contactMessage').value
         };
         

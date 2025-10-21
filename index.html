@@ -19,8 +19,8 @@
 
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="assets/img/logo.png">
+    <link rel="icon" href="favicon.ico" type="assets/img/logo.png">
 
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
@@ -47,19 +47,24 @@
     <style>
         /* Custom styles that work with Bootstrap 3.x */
         .btn-custom-orange {
-            background-color: #ff8c00 !important;
-            border-color: #ff8c00 !important;
+            background-color: #3498db !important;
+            border-color: #3498db !important;
             color: white !important;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            border-radius: 8px;
         }
 
         .btn-custom-orange:hover {
-            background-color: #e67e00 !important;
-            border-color: #e67e00 !important;
+            background-color: #2980b9 !important;
+            border-color: #2980b9 !important;
             color: white !important;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
         }
 
         .text-custom-orange {
-            color: #ff8c00 !important;
+            color: #3498db !important;
         }
 
         .section-padding {
@@ -72,22 +77,96 @@
 
         .shadow-custom {
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .shadow-custom:hover {
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+            transform: translateY(-5px);
         }
 
         .img-container {
             margin-bottom: 15px;
             overflow: hidden;
             border-radius: 20px;
+            position: relative;
+        }
+
+        .img-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(44, 62, 80, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+
+        .img-container:hover::before {
+            opacity: 1;
         }
 
         .img-container img {
             width: 100%;
             height: 400px;
             object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .img-container:hover img {
+            transform: scale(1.05);
         }
 
         .content-wrapper {
             padding: 0 30px;
+        }
+
+        .content-wrapper h2 {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .content-wrapper p {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Phone Input Modern Style */
+        .phone-input-wrapper {
+            display: flex;
+            gap: 10px;
+        }
+
+        .phone-input-wrapper select {
+            flex: 0 0 130px;
+            padding: 12px 10px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            background-color: #fff;
+        }
+
+        .phone-input-wrapper input {
+            flex: 1;
+        }
+
+        .phone-input-wrapper select:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
         }
 
         @media (max-width: 768px) {
@@ -111,6 +190,27 @@
             .mobile-order-2 {
                 order: 2;
             }
+
+            .phone-input-wrapper {
+                flex-direction: column;
+            }
+
+            .phone-input-wrapper select {
+                flex: 1;
+                width: 100%;
+            }
+        }
+
+        /* Enhanced Scroll Animation */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 
@@ -204,13 +304,35 @@
 
                             <div class="hero-form-group">
                                 <label for="phone">Phone Number *</label>
-                                <input type="tel" id="phone" name="phone" placeholder="" required>
+                                <div class="phone-input-wrapper">
+                                    <select id="countryCode" name="countryCode" required>
+                                        <option value="+1">🇺🇸 +1</option>
+                                        <option value="+44">🇬🇧 +44</option>
+                                        <option value="+91" selected>🇮🇳 +91</option>
+                                        <option value="+61">🇦🇺 +61</option>
+                                        <option value="+81">🇯🇵 +81</option>
+                                        <option value="+86">🇨🇳 +86</option>
+                                        <option value="+49">🇩🇪 +49</option>
+                                        <option value="+33">🇫🇷 +33</option>
+                                        <option value="+39">🇮🇹 +39</option>
+                                        <option value="+34">🇪🇸 +34</option>
+                                        <option value="+7">🇷🇺 +7</option>
+                                        <option value="+55">🇧🇷 +55</option>
+                                        <option value="+52">🇲🇽 +52</option>
+                                        <option value="+27">🇿🇦 +27</option>
+                                        <option value="+971">🇦🇪 +971</option>
+                                        <option value="+966">🇸🇦 +966</option>
+                                        <option value="+65">🇸🇬 +65</option>
+                                        <option value="+60">🇲🇾 +60</option>
+                                    </select>
+                                    <input type="tel" id="phone" name="phone" placeholder="1234567890" required>
+                                </div>
                             </div>
 
                             <div class="hero-form-group">
                                 <label for="message">Your Message *</label>
                                 <textarea id="message" name="message"
-                                    placeholder="I'm interested in finding a property..." required></textarea>
+                                    placeholder="Tell us about your SEO needs..." required></textarea>
                             </div>
 
                             <button type="submit" class="hero-form-submit">
@@ -245,23 +367,24 @@
     <section class="section-padding">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-sm-12">
+                <div class="col-md-6 col-sm-12 animate-on-scroll">
                     <div class="row">
                         <div class="col-xs-6 col-sm-6">
                             <div class="img-container shadow-custom">
                                 <img src="https://res.cloudinary.com/dhv8cuh62/image/upload/v1760874108/IMG-20251019-WA0015_ryv3b7.jpg"
-                                    alt="Roof inspection worker" class="img-responsive">
+                                    alt="SEO Service Professional" class="img-responsive">
                             </div>
                         </div>
                         <div class="col-xs-6 col-sm-6">
                             <div class="img-container shadow-custom">
                                 <img src="https://res.cloudinary.com/dhv8cuh62/image/upload/v1760874076/IMG-20251019-WA0018_khpayb.jpg"
+                                    alt="Digital Marketing Expert" class="img-responsive">
                                     alt="Roof repair workers" class="img-responsive">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-12">
+                <div class="col-md-6 col-sm-12 animate-on-scroll">
                     <div class="content-wrapper">
                         <h2
                             style="font-size: 42px; font-weight: 700; line-height: 1.2; margin-bottom: 25px; color: #2d3748;">
@@ -785,15 +908,37 @@
 
                             <div class="contact-form-group">
                                 <label for="contactPhone">Phone Number *</label>
-                                <input type="tel" id="contactPhone" name="contactPhone" placeholder="(123) 456-7890"
+                                <div class="phone-input-wrapper">
+                                    <select id="contactCountryCode" name="contactCountryCode" required>
+                                        <option value="+1">🇺🇸 +1</option>
+                                        <option value="+44">🇬🇧 +44</option>
+                                        <option value="+91" selected>🇮🇳 +91</option>
+                                        <option value="+61">🇦🇺 +61</option>
+                                        <option value="+81">🇯🇵 +81</option>
+                                        <option value="+86">🇨🇳 +86</option>
+                                        <option value="+49">🇩🇪 +49</option>
+                                        <option value="+33">🇫🇷 +33</option>
+                                        <option value="+39">🇮🇹 +39</option>
+                                        <option value="+34">🇪🇸 +34</option>
+                                        <option value="+7">🇷🇺 +7</option>
+                                        <option value="+55">🇧🇷 +55</option>
+                                        <option value="+52">🇲🇽 +52</option>
+                                        <option value="+27">🇿🇦 +27</option>
+                                        <option value="+971">🇦🇪 +971</option>
+                                        <option value="+966">🇸🇦 +966</option>
+                                        <option value="+65">🇸🇬 +65</option>
+                                        <option value="+60">🇲🇾 +60</option>
+                                    </select>
+                                    <input type="tel" id="contactPhone" name="contactPhone" placeholder="1234567890"
                                     required>
+                                </div>
                             </div>
 
                           
                             <div class="contact-form-group">
                                 <label for="contactMessage">Your Message *</label>
                                 <textarea id="contactMessage" name="contactMessage"
-                                    placeholder="Tell us more about your needs..." required></textarea>
+                                    placeholder="Tell us more about your SEO needs..." required></textarea>
                             </div>
 
                             <button type="submit" class="contact-form-submit">
@@ -878,6 +1023,27 @@
                 faqIcon.classList.add('fa-minus');
             }
         }
+
+        // Scroll Animation Observer
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.animate-on-scroll').forEach(element => {
+                observer.observe(element);
+            });
+        });
     </script>
 
     <script src="assets/js/anti-inspect.js"></script>
