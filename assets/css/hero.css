@@ -10,15 +10,13 @@
     padding: 80px 0 50px;
     display: flex;
     align-items: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    /* Modern professional gradient - no background image */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     overflow-x: hidden; /* Prevent horizontal scroll */
     overflow-y: visible; /* Allow natural vertical flow */
 }
 
-/* Dark Overlay with Animated Gradient */
+/* Subtle Overlay for Depth */
 .hero-section::before {
     content: '';
     position: absolute;
@@ -26,7 +24,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(44, 62, 80, 0.88) 0%, rgba(44, 62, 80, 0.78) 100%);
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
     z-index: 1;
 }
 
@@ -39,8 +37,8 @@
     right: 0;
     bottom: 0;
     background-image: 
-        radial-gradient(circle at 20% 50%, rgba(255, 165, 0, 0.12) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(255, 165, 0, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.12) 0%, transparent 50%);
     z-index: 1;
     animation: pulseBackground 8s ease-in-out infinite;
 }

@@ -2800,20 +2800,21 @@ padding-bottom: 15px;
 /*FOOOTER*/
 .footer-area{
 border-top: 1px solid #D1D1D1;
-background: #555 url("../../assets/img/bg-footer.jpg") repeat scroll 0% 0%;
-color: #535353;
+/* Modern professional gradient - no background image */
+background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+color: #ffffff;
 }
 .footer{
 padding: 0px 0px 60px;
-background: rgba(255, 255, 255, 0.89) none repeat scroll 0% 0%;
+background: rgba(30, 60, 114, 0.95) none repeat scroll 0% 0%;
 }
 .footer ul li i { 
     padding-right: 10px;
-    color: #000;
+    color: #667eea;
 } 
 .footer-copy{
-    background: rgba(213, 213, 213, 0.9) none repeat scroll 0% 0%;
-    border-top: 0.051px solid rgba(162, 162, 162, 0.46);
+    background: rgba(15, 30, 57, 0.9) none repeat scroll 0% 0%;
+    border-top: 0.051px solid rgba(255, 255, 255, 0.2);
     padding-bottom: 0px;
     padding-bottom: 7px;
 padding-top: 7px;
@@ -2828,25 +2829,26 @@ padding-top: 7px;
     line-height: 25px;
     font-size: 13px;
     padding-bottom: 20px;
+    color: rgba(255, 255, 255, 0.85);
 }
 .footer h4{
-    color: #717171;
+    color: #ffffff;
     font-weight: 400;
     margin-top: 0px;
     font-size: 20px;
     text-transform: uppercase;
-    border-bottom: 2px solid #878787;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
     line-height: 35px;
     margin-bottom: 0px;
     letter-spacing: 2px;
 }
 .footer h4 span{
-    border-bottom: 3px solid #FDC600;
+    border-bottom: 3px solid #667eea;
 }
 .footer-title-line {
     width: 100px;
     height: 2px;
-    background: #FFA600;
+    background: #667eea;
     margin: 0px 0px 33px;
     position: relative;
     top: -2px;
@@ -2857,7 +2859,7 @@ padding-top: 7px;
     font-weight: 700;
 }
 .footer a{
-    color: #fff;
+    color: rgba(255, 255, 255, 0.85);
 }
 .footer ul{
     padding: 0px;
@@ -2874,26 +2876,34 @@ ul.footer-adress li {
     margin-bottom: -4px;
 }
 .footer ul li a{
-color: #535353;
+color: rgba(255, 255, 255, 0.85);
 font-weight: 500;
 text-transform: uppercase;
 font-size: 13px;
+transition: all 0.3s ease;
 }
 .footer ul li a:hover{
-    color: #FDC600;
+    color: #667eea;
     text-decoration: none;
+    transform: translateX(5px);
 }
 .footer-menu li{
-  border-bottom: 1px solid rgba(255, 171, 0, 0.31);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .footer-copy span{
     margin-right: 20px; 
     font-size: 13px;
+    color: rgba(255, 255, 255, 0.85);
 }
 .footer-copy span a{
-    color: #000;
+    color: rgba(255, 255, 255, 0.85);
     font-weight: 500;
+    transition: color 0.3s ease;
+}
+.footer-copy span a:hover{
+    color: #667eea;
+    text-decoration: none;
 } 
 .footer img{
     height: 32px;
